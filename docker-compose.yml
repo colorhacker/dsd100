@@ -1,0 +1,29 @@
+#
+# Copyright IBM Corp All Rights Reserved
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+version: '2'
+
+networks:
+  basic:
+
+services:
+  dsd100:
+    image: ubuntu
+    environment:
+      - DSD_CA_HOME=/etc/dsd100/mp3-ogg
+    ports:
+      - "7054:7054"
+    command: /bin/bash
+    volumes:
+      - ./:/etc/dsd100/mp3-ogg
+    working_dir: /etc/dsd100/mp3-ogg
+    container_name: dsd100
+    networks:
+      - basic
+
+
+docker run -it -v "/media/ubuntu/E/GitHub/dsd100:/dsd100" ubuntu bash
+
+

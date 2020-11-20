@@ -1,0 +1,16 @@
+windows 安装wsl
+python2.x
+pip install numpy scipy theano lasagne -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+bugs修复:
+
+pip install --upgrade https://github.com/Lasagne/Lasagne/archive/master.zip
+
+python separate_dsd.py -h
+
+
+
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+pip config set global.index-url http://mirrors.cloud.tencent.com/pypi/simple
+pip config set global.index-url http://pypi.douban.com/simple/
